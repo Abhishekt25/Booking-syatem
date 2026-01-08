@@ -1,0 +1,18 @@
+# node modules (anywhere)
+node_modules/
+
+# env files (anywhere)
+.env
+.env.*
+!.env.example
+
+# builds
+dist/
+build/
+
+# logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
