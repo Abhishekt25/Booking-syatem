@@ -15,7 +15,6 @@ const PORT = process.env.PORT;
 app.use(cors({
   origin: [
     'https://booking-system25.vercel.app',
-    'https://booking-syatem-2507.vercel.app',
     'http://localhost:5173',
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
