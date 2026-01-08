@@ -2,7 +2,7 @@ import axios from 'axios';
 import type{ Booking, CreateBookingData, ApiResponse } from '../types/booking';
 
 // Use your backend URL explicitly
-const API_BASE_URL = 'http://localhost:2507/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL as string;
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -52,7 +52,9 @@ export const bookingApi = {
   // Test connection first
   async testConnection(): Promise<ApiResponse<any>> {
     try {
-      const response = await axios.get('http://localhost:2507/health');
+        const response = await axios.get(
+        import.meta.env.VITE_API_BASE_URL.replace('/api', '') + '/health'
+      );
       return response.data;
     } catch (error: any) {
       return {
