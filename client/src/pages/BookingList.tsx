@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { bookingApi } from '../api/bookingApi';
 import type { Booking } from '../types/booking';
-import { FaUser, FaEnvelope, FaCalendarDay, FaClock, FaTag, FaSpinner } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaCalendarDay, FaClock, FaSpinner } from 'react-icons/fa';
 import { format } from 'date-fns';
 import { toast } from 'react-toastify';
 
