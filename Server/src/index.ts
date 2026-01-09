@@ -12,18 +12,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 // CORS configuration
-app.use(cors({
-  origin: [
-    'https://booking-system25.vercel.app',
-    'http://localhost:5173',
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
-
-app.options('*', cors());
-
-
+app.use(cors());
 
 
 app.use(express.json());
